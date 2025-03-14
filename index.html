@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme Roller Shutter Doors</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#C41E3A',
+                        'brand-brown': '#8B7355',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav x-data="{ isOpen: false }" class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="images/image3.jpg" alt="Supreme Roller Shutter Doors" class="h-16 w-auto image-hover">
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="text-gray-700 hover:text-brand-red">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-brand-red transition duration-300">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-brand-red transition duration-300">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand-red transition duration-300">Contact</a>
+                    <a href="tel:0873763457" class="bg-brand-red text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 animate-button">
+                        Call Now
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div x-show="isOpen" class="md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-brand-red">Services</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-brand-red">About</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-brand-red">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-20">
+        <div class="bg-gradient-to-r from-brand-red to-red-800 h-[600px]">
+            <div class="max-w-7xl mx-auto px-4 h-full flex items-center">
+                <div class="text-white">
+                    <h1 class="text-5xl font-bold mb-6 float-animation" x-data="{ shown: false }" x-intersect="shown = true" 
+                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+                        class="transition-all duration-1000">
+                        Supreme Roller Shutter Doors
+                    </h1>
+                    <p class="text-xl mb-8 max-w-2xl fade-in-up">Manufacturer Services Repairs to All Types of Commercial & Industrial Doors</p>
+                    <div class="space-x-4">
+                        <a href="#contact" class="bg-white text-brand-red px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 animate-button">
+                            Get a Quote
+                        </a>
+                        <a href="tel:0873763457" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-brand-red transition duration-300 animate-button">
+                            Call Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 fade-in-up">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div x-data="{ shown: false }" x-intersect="shown = true" 
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+                    class="transition-all duration-1000 bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl service-card card-hover">
+                    <h3 class="text-xl font-bold mb-4">Roller Shutter Doors</h3>
+                    <ul class="space-y-2">
+                        <li>Steel Gates</li>
+                        <li>Sliding Gates</li>
+                        <li>Roofing</li>
+                        <li>Electrical</li>
+                        <li>Plumbing</li>
+                    </ul>
+                </div>
+                <div x-data="{ shown: false }" x-intersect="shown = true" 
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+                    class="transition-all duration-1000 delay-200 bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl service-card card-hover">
+                    <h3 class="text-xl font-bold mb-4">Garage Doors</h3>
+                    <ul class="space-y-2">
+                        <li>Roll Up Doors</li>
+                        <li>Sectional Doors</li>
+                        <li>Sliding Gates</li>
+                        <li>Shopfront Doors</li>
+                        <li>Glass Doors</li>
+                    </ul>
+                </div>
+                <div x-data="{ shown: false }" x-intersect="shown = true" 
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
+                    class="transition-all duration-1000 delay-400 bg-gray-50 rounded-lg p-6 shadow-lg hover:shadow-xl service-card card-hover">
+                    <h3 class="text-xl font-bold mb-4">Security Automations</h3>
+                    <ul class="space-y-2">
+                        <li>Gate Motors</li>
+                        <li>Electric Fencing COC</li>
+                        <li>Alarms</li>
+                        <li>Cameras</li>
+                        <li>Boom Gates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 fade-in-up">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6 fade-in-up">
+                    <div class="flex items-center space-x-4 card-hover p-4 bg-white rounded-lg">
+                        <i class="fas fa-phone text-brand-red text-2xl"></i>
+                        <div>
+                            <h3 class="font-bold">Phone Numbers</h3>
+                            <p><a href="tel:0873763457" class="hover:text-brand-red">(087) 376 3457</a></p>
+                            <p><a href="tel:0843816059" class="hover:text-brand-red">(084) 381 6059</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 card-hover p-4 bg-white rounded-lg">
+                        <i class="fas fa-envelope text-brand-red text-2xl"></i>
+                        <div>
+                            <h3 class="font-bold">Email</h3>
+                            <p><a href="mailto:Supremersd@outlook.com" class="hover:text-brand-red">Supremersd@outlook.com</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 card-hover p-4 bg-white rounded-lg">
+                        <i class="fas fa-globe text-brand-red text-2xl"></i>
+                        <div>
+                            <h3 class="font-bold">Website</h3>
+                            <p><a href="http://www.shutters.supreme@wixsite.com/doors" class="hover:text-brand-red">www.shutters.supreme@wixsite.com/doors</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="space-y-6 fade-in-up">
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="name">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border input-focus">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="email">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border input-focus">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="message">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border input-focus"></textarea>
+                    </div>
+                    <button type="submit" class="bg-brand-red text-white px-8 py-3 rounded-full hover:bg-red-700 transition duration-300 animate-button">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="fade-in-up">
+                    <h3 class="text-xl font-bold mb-4">Supreme Roller Shutter Doors</h3>
+                    <p class="text-gray-400">Professional door installation and repair services for commercial and industrial properties.</p>
+                </div>
+                <div class="fade-in-up">
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="fade-in-up">
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Phone: (087) 376 3457</li>
+                        <li>Email: Supremersd@outlook.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Supreme Roller Shutter Doors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

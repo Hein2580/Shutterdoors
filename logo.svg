@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+    <!-- House shape with more curved edges -->
+    <path d="M50,120 L250,120 C260,120 270,110 270,100 L270,60 L150,20 L30,60 L30,100 C30,110 40,120 50,120 Z" 
+          fill="#C41E3A"/>
+    
+    <!-- Window grid with adjusted spacing -->
+    <g transform="translate(60, 65)">
+        <!-- Red squares -->
+        <rect x="0" y="0" width="30" height="30" fill="#C41E3A"/>
+        <rect x="35" y="0" width="30" height="30" fill="#C41E3A"/>
+        <rect x="70" y="0" width="30" height="30" fill="#C41E3A"/>
+        <!-- Black squares -->
+        <rect x="105" y="0" width="30" height="30" fill="#000000"/>
+        <rect x="140" y="0" width="30" height="30" fill="#000000"/>
+    </g>
+    
+    <!-- Curved line with more pronounced sweep -->
+    <path d="M30,60 Q150,0 270,60" 
+          fill="none" 
+          stroke="#C41E3A" 
+          stroke-width="4"
+          stroke-linecap="round"/>
+          
+    <!-- Circle at top -->
+    <circle cx="150" cy="25" r="6" fill="#C41E3A"/>
+</svg> 
